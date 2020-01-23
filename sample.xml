@@ -9,19 +9,20 @@
 
 <item>
   <title>Article 1</title>
-  <link>article1</link>
-  <description>description of Article 1</description>
+  <artist>article1</artist>
+  <album>description of Article 1</artist>
 </item>
  <item>
   <title>Article 2</title>
-  <link>article2</link>
-  <description>description of Article 2</description>
+  <artist>article2</artist>
+  <album>description of Article 2</artist>
 </item>
  <item>
   <title>Article 3</title>
-  <link>article3</link>
-  <description>description of Article 4</description>
+  <artist>article3</artist>
+  <album>description of Article 3</artist>
 </item>
+
 
 </channel>
 </rss>
