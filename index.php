@@ -16,7 +16,7 @@ function loadXMLDoc() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "sample.xml", true);
+  xhttp.open("GET", "rss.xml", true);
   xhttp.send();
 }
 </script>
