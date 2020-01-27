@@ -26,8 +26,8 @@
  
    echo "<item>
    <title>$title</title>
-   <artist>$artist</link>
-   <album>$album</description>
+   <artist>$artist</artist>
+   <album>$album</album>
    </item>";
  }
  echo "</channel></rss>";
