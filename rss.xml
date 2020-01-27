@@ -6,7 +6,7 @@
  echo "Database connection failed!: " . mysqli_connect_error();
  }
  
- $sql = "SELECT * FROM tbl_music ORDER BY id DESC LIMIT 20";
+ $sql = "SELECT * FROM tbl_music ORDER BY mus_id DESC LIMIT 20";
  $query = mysqli_query($con,$sql);
  
  header( "Content-type: text/xml");
@@ -26,8 +26,8 @@
  
    echo "<item>
    <title>$title</title>
-   <artist>$artist</link>
-   <album>$album</description>
+   <artist>$artist</artist>
+   <album>$album</album>
    </item>";
  }
  echo "</channel></rss>";
