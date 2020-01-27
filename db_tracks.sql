@@ -5,9 +5,7 @@ USE db_tracks;
 CREATE TABLE tbl_music
  (
   `title` varchar(180) NOT NULL DEFAULT '',
-  `link` varchar(180) NOT NULL DEFAULT '',
-  `description` varchar(180) NOT NULL DEFAULT '',
-  `title` varchar(180) NOT NULL DEFAULT '',
+  `genre` varchar(180) NOT NULL DEFAULT '',
   `artist` varchar(180) NOT NULL DEFAULT '',
   `album` varchar(180) NOT NULL DEFAULT '',
   PRIMARY KEY (`mus_id`)
