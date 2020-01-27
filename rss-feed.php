@@ -1,12 +1,12 @@
 <?php
 // Create connection
- $con=mysqli_connect("example.com","alex","qwerty");
+ $con=mysqli_connect("db_tracks.sql","localhost","root");
 // Check connection
  if (mysqli_connect_errno($con)) {
  echo "Database connection failed!: " . mysqli_connect_error();
  }
  
- $sql = "SELECT * FROM rss_info ORDER BY id DESC LIMIT 20";
+ $sql = "SELECT * FROM tbl_music ORDER BY id DESC LIMIT 20";
  $query = mysqli_query($con,$sql);
  
  header( "Content-type: text/xml");
