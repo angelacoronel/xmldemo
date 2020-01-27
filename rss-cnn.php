@@ -1,6 +1,6 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("rss-feed.php");//XML page URL
+ $domOBJ->load("http://rss.cnn.com/rss/edition.rss");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("item");
  
@@ -10,11 +10,11 @@
  foreach( $content as $data )
  {
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-   $artist = $data->getElementsByTagName("link")->item(0)->nodeValue;
+   $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
   
    echo "<li>$title
             <ul>
-                <li>$artist</li>
+                <li>$link</li>
             </ul>
         </li>";
  }
