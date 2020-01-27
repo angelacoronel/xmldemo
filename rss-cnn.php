@@ -1,6 +1,6 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://coronel-app.herokuapp.com/sample.xml");//XML page URL
+ $domOBJ->load("email.xml");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("item");
  
