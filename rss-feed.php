@@ -1,6 +1,6 @@
 <?php
 // Create connection
- $con=mysqli_connect("db_tracks.sql","localhost","root");
+ $con=mysqli_connect("db_tracks","localhost","root");
 // Check connection
  if (mysqli_connect_errno($con)) {
  echo "Database connection failed!: " . mysqli_connect_error();
