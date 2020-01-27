@@ -21,13 +21,13 @@
  
  while($row = mysqli_fetch_array($con,$query)){
    $title=$row["title"];
-   $link=$row["link"];
-   $description=$row["description"];
+   $artist=$row["artist"];
+   $album=$row["album"];
  
    echo "<item>
    <title>$title</title>
-   <link>$link</link>
-   <description>$description</description>
+   <artist>$artist</link>
+   <album>$album</description>
    </item>";
  }
  echo "</channel></rss>";
