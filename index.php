@@ -1,24 +1,33 @@
-<!DOCTYPE html>
-<html>
-<body onload="loadXMLDoc()">
+<?php
+ $domOBJ = new DOMDocument();
+ $domOBJ->load("http://192.168.64.2/xml/rss.php");//XML page URL
+ 
+ $content = $domOBJ->getElementsByTagName("track");
+?>
 
-<h2>Using the XMLHttpRequest Object</h2>
+ <h1>Tracks</h1>
 
-<div id="demo">
+ <?php
+ foreach( $content as $data )
+ {?>
+     <div class="border">
+     <?php
+     $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
+     $artist = $data->getElementsByTagName("artist")->item(0)->nodeValue;
+     $genre = $data->getElementsByTagName("genre")->item(0)->nodeValue;
+     $album = $data->getElementsByTagName("album")->item(0)->nodeValue;
+     echo "<ul>
+            <h2>$title</h2>
+              <ul>
+                  <li>Artist: $artist </li>
+                  <li>Genre: $genre </li>
+                  <li>Album: $album </li>
+              </ul>
+          </ul>";
+    ?>
+     </div>
+  <?php
+ }
+?>
 </div>
-
-<script>
-function loadXMLDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "rss.xml", true);
-  xhttp.send();
-}
-</script>
-</body>
-</html>
+</div>
