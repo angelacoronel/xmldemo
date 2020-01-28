@@ -1,6 +1,6 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("http://192.168.64.2/xml/rss.php");//XML page URL
+ $domOBJ->load("http://coronel-app.heroku.com/rss.php");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("track");
 ?>
